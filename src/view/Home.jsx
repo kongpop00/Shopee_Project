@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
+import Nav from '../cpmponent/Nav'
 const Home = () => {
-
-
+  
   return (
     <div>
-      asdasdasdasdas
+    <Nav/>
     </div>
   )
 }
