@@ -1,13 +1,23 @@
 import React, { useEffect, useState } from 'react'
+import Header from '../component/Header'
+import Category from '../component/Category'
 
-import Nav from '../cpmponent/Nav'
+
+
+
+
 const Home = () => {
   
   return (
-    <div>
-    <Nav/>
+    <div className='flex flex-col justify-center items-center  w-[100%]'>
+     
+        <Header/>
+        <Category/>
+     
+
+        
     </div>
   )
 }
 
-export default Home
+export default Home 

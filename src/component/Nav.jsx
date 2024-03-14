@@ -13,7 +13,7 @@ const handleopenProfile=()=>{
 const stylebtn ='border-r-2 px-[10px] hover:text-[#4b4a4a9d]' 
 const backgroundnav ="linear-gradient(180deg, rgba(247,57,0,1) 0%, rgba(255,106,0,1) 76%)"
   return (
-    <div style={{background:`${backgroundnav }`}} className='fixed m-[auto] h-[250px]  w-[100%] flex flex-col justify-center items-center text-[15px]'>
+    <div style={{background:`${backgroundnav }`}} className=' m-[auto] h-[200px]  w-[100%] flex flex-col justify-center items-center text-[15px]'>
        <div  className='w-[1280px]  flex flex-col h-[80%] justify-around '>
            
             {/**แถวที่ 1 */}
