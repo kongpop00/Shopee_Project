@@ -11,7 +11,7 @@ function App() {
   
   return (
       <ShoppingCartProvider>
-    <div className=" ">
+    <div className="bg-white ">
      <div className="fixed top-0 w-[100%] z-10" ><Nav/></div>
       <Routes>
               <Route path="/" element={<Home />} />
