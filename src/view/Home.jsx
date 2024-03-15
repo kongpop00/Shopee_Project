@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react'
+
 import Header from '../component/Header'
 import Category from '../component/Category'
 import Containershop from '../component/containershop'
+
+
 
 
 
@@ -15,7 +17,9 @@ const Home = () => {
         <Header/>
         <Category/>
         <Containershop/>
-
+   
+       
+       
         
     </div>
   )

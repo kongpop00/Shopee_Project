@@ -14,7 +14,9 @@ export function useShoppingCart() {
 }
 
 export function ShoppingCartProvider({ children }) {
-  const navigate = useNavigate();
+
+const [isopen ,setisopen]=useState(true)
+const navigate = useNavigate();
 const [Categories,setCategories]=useState([])
 const [shop,setShop]=useState([])
 const [SingleProduct,setSingleProduct]=useState([])
@@ -23,7 +25,11 @@ const [search ,setSearch]=useState("")
 
 const handleSearch=()=>{
  console.log('======',search);
- navigate(`search/${search}`);
+ setSearch("")
+ if(search.length >0){
+  navigate(`search/${search}`);
+ }
+
 }
   return (
     <ShoppingCartContext.Provider
@@ -35,7 +41,9 @@ const handleSearch=()=>{
         setSingleProduct,
         search
          ,setSearch,
-         handleSearch
+         handleSearch,
+         isopen 
+         ,setisopen
       }}
     >
       {children}
