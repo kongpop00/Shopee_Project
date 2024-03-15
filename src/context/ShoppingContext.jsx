@@ -1,11 +1,10 @@
 import {
   createContext,
   useContext,
-  useEffect,
   useState,
 } from "react";
 
-
+import { useNavigate } from 'react-router-dom';
 
 
 const ShoppingCartContext = createContext();
@@ -15,13 +14,28 @@ export function useShoppingCart() {
 }
 
 export function ShoppingCartProvider({ children }) {
- 
+  const navigate = useNavigate();
 const [Categories,setCategories]=useState([])
+const [shop,setShop]=useState([])
+const [SingleProduct,setSingleProduct]=useState([])
+const [search ,setSearch]=useState("")
+
+
+const handleSearch=()=>{
+ console.log('======',search);
+ navigate(`search/${search}`);
+}
   return (
     <ShoppingCartContext.Provider
       value={{
         Categories,
-        setCategories
+        setCategories,
+        shop,setShop,
+        SingleProduct,
+        setSingleProduct,
+        search
+         ,setSearch,
+         handleSearch
       }}
     >
       {children}
