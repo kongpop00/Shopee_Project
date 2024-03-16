@@ -23,7 +23,7 @@ export function FeaturedImageGallery({num}) {
     console.log('asdasd',data);
  },[])
   return (
-    <div className="grid gap-4 justify-center items-center">
+    <div className="grid gap-4 justify-center items-center w-[100%]">
     <div>
       <img
         className="h-[200px]  max-w-full rounded-lg object-cover object-center md:h-[480px] m-[auto]"

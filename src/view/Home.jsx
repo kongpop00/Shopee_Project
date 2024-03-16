@@ -1,28 +1,18 @@
-
-import Header from '../component/Header'
-import Category from '../component/Category'
-import Containershop from '../component/containershop'
-
-
-
-
-
-
+import Header from "../component/Header";
+import Category from "../component/Category";
+import Containershop from "../component/containershop";
 
 const Home = () => {
-
   return (
-    <div className='flex flex-col justify-center items-center  w-[100%]'>
-     
-        <Header/>
-        <Category/>
-        <Containershop/>
-   
-       
-       
-        
-    </div>
-  )
-}
+    <div className=" flex flex-col justify-center items-center  ">
+      <Header />
+      <div className=" w-[100%] xl:max-w-7xl overflow-x-scroll ">
+        <Category />
+      </div>
 
-export default Home 
+      <Containershop />
+    </div>
+  );
+};
+
+export default Home;

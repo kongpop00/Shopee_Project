@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useShoppingCart } from "../context/ShoppingContext";
-import catalog from '../../public/catalog/catalog.json'
+import catalog from "../../public/catalog/catalog.json";
 import { Link } from "react-router-dom";
 const Category = () => {
   const { Categories, setCategories, shop } = useShoppingCart();
@@ -19,25 +19,24 @@ const Category = () => {
     getCategories();
   }, []);
 
-
   return (
-    <div className="mt-[50px]">
-      <div className="w-[100%] h-[40px]  border-2">
-        <span className="flex items-center p-[5px] ml-[20px] text-[#555]">
+    <div className=" w-[100%] md:mt-[120px] lg:mt-[250px] relative ">
+      <div className="w-[100%] h-[40px]   ">
+        <span className="absolute left-0 flex items-center p-[5px] ml-[20px] text-[#555]">
           หมวดหมู่
         </span>
       </div>
-      <div className=" w-[1280px] h-[270px] grid grid-cols-10   ">
+      <div className="  h-[270px] w-[1280px] grid grid-cols-10 ">
         {catalog.map((e) => {
           return (
-            <Link to={`catalog/${e.name}`}
-              className=" w-[100%] border-2 text-[14px]  flex flex-col  justify-center "
+            <Link
+              to={`catalog/${e.name}`}
+              className="  border-2 text-[14px]  flex flex-col  justify-center overflow-hidden "
               key={e.id}
             >
               <button className="bg-slate-50 h-[100%] flex flex-col justify-between items-center hover:scale-110">
-              <img className="w-[70px] mt-[20px]" src={e.img} />
-              <span>{e.name}</span>
-               
+                <img className="w-[70px] mt-[20px]" src={e.img} />
+                <span>{e.name}</span>
               </button>
             </Link>
           );

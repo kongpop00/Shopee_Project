@@ -2,7 +2,7 @@ import { Carousel } from "@material-tailwind/react";
  
 export function GalleryWithCarousel() {
   return (
-    <Carousel loop={true} autoplay={true} className="rounded-xl">
+    <Carousel loop={true} autoplay={true} className="">
       <img
         src="/logo/slie1.png"
         alt="image 1"

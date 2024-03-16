@@ -12,15 +12,17 @@ function App() {
   return (
       <ShoppingCartProvider>
     <div className="bg-white ">
-     <div className="fixed top-0 w-[100%] z-10" ><Nav/></div>
+
+   <div className="fixed top-0 w-[100%] z-10" ><Nav/></div>
       <Routes>
               <Route path="/" element={<Home />} />
-              <Route path='/:id' element={<SingleProduct/>}/>
+             <Route path='/:id' element={<SingleProduct/>}/>
               <Route path='catalog/:name' element={<ProductsCatalog/>}/>
               <Route path='search/:products' element={<SearchProduct/>}/>
              
            
             </Routes>
+         
     </div>
     </ShoppingCartProvider>
   )

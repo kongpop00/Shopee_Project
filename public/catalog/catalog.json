@@ -6,12 +6,12 @@
     },
     {
         "id" : 2,
-        "name": "labtops",
+        "name": "laptops",
         "img" : "/catalog/labtop_0.png"
     },
     {
         "id" : 3,
-        "name": "frraganances",
+        "name": "fragrances",
         "img" : "/catalog/frraganance_0.jpg"
     },
     {    "id" : 4,

@@ -16,7 +16,7 @@ const SearchProduct = () => {
         search()
     },[products])
   return (
-    <div className='max-w-7xl  h-[100vh] m-[auto] mt-[250px]'>
+    <div className='max-w-7xl  h-[100vh] m-[auto] mt-[100px] lg:mt-[230px]'>
       <div className='flex justify-center'>
         {data.length ==0 ? (
             <div className='text-[72px] text-[#353434bd]'>Product not found</div>
@@ -24,12 +24,12 @@ const SearchProduct = () => {
         
         :
        
-         <div className='flex gap-3'>
+         <div className='flex flex-wrap gap-3 justify-center'>
             {data.map((e) => {
         return (
           <Link to={`/${e.id}`}
             key={e.id}
-            className="w-[200px] h-[250px] border-2 flex flex-col justify-between relative hover:scale-105"
+            className="w-[180px] lg:w-[200px] h-[250px] border-2 flex flex-col justify-between relative hover:scale-105"
           >
             <div>
               <img className="w-[100%] h-[150px]" src={e.images[0]}></img>
