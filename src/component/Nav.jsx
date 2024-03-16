@@ -97,11 +97,11 @@ const Nav = () => {
               className=" hidden lg:flex lg:w-[150px] xl:w-[250px] text-emerald-50"
             ></img>
           </Link>
-          <div className="w-[60%] h-[40px] lg:w-[65%] lg:h-[45px] focus:border-none bg-white flex items-center justify-between  relative">
+          <div className="w-[75%] h-[40px] lg:w-[65%] lg:h-[45px] focus:border-none bg-white flex items-center justify-between  relative">
             <input
-              className="h-[100%] w-[100%] pl-[10px] lg:pl-[40px] "
+              className="h-[100%] w-[100%] pl-[10px] lg:pl-[40px] text-[12px] lg:text-[14px] xl:text-[20px] bg-white"
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="3.15 Mind Mounth Sale | ลดมากกว่า 50%"
+              placeholder=" 3.15 Mind Mounth Sale | ลดมากกว่า 50%"
               type="text"
             ></input>
 

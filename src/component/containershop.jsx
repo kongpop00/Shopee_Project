@@ -17,7 +17,7 @@ const Containershop = () => {
     getAllProduct();
   }, []);
   return (
-    <div className="max-w-7xl  h-[100vh] mt-[40px]  justify-between gap-3 grid grid-cols-2 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-6">
+    <div className="max-w-7xl  h-[100%] bg-white mt-[40px]  justify-between gap-3 grid grid-cols-2 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-6">
       {shop.map((e) => {
         return (
           <Link to={`/${e.id}`}
