@@ -27,8 +27,9 @@ const SingleProduct = () => {
   console.log(discountPercentage);
 
   return (
-    <div className="max-w-7xl w-[100%] bg-white lg:p-[20px] xl:p-[0px] lg:mt-[200px] xl:mt-[250px] items-center mt-[150px] md:mt-[150px] m-[auto] flex flex-col lg:flex-row">
-      <div className="w-[100%] lg:w-[50%]">
+
+    <div className="max-w-7xl w-[100%] h-[100%] bg-white lg:p-[20px] xl:p-[0px] lg:mt-[180px] xl:mt-[250px] items-center mt-[80px] md:mt-[80px] m-[auto] flex flex-col lg:flex-row">
+      <div className="w-[100%] lg:w-[50%] mt-[80px] ">
         {" "}
         <FeaturedImageGallery num={num} />
       </div>
