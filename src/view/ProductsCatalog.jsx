@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import Btngohome from "../component/Btngohome";
 
 const ProductsCatalog = () => {
   const { name } = useParams();
@@ -46,7 +47,9 @@ const ProductsCatalog = () => {
       })}
     </div>
     </div>
-     
+    <div className="  absolute top-[100px] left-10 lg:hidden">
+        <Btngohome/>
+      </div>
 
 
     </div>

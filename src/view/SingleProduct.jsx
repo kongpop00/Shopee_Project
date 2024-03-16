@@ -6,6 +6,7 @@ import { useShoppingCart } from "../context/ShoppingContext";
 import { Rating } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import Btngohome from "../component/Btngohome";
 const SingleProduct = () => {
   const { setSingleProduct, SingleProduct } = useShoppingCart();
 
@@ -26,7 +27,7 @@ const SingleProduct = () => {
   console.log(discountPercentage);
 
   return (
-    <div className="max-w-7xl w-[100%] bg-white lg:p-[20px] xl:p-[0px] lg:mt-[200px] xl:mt-[250px] items-center mt-[150px] md:mt-[100px] m-[auto] flex flex-col lg:flex-row">
+    <div className="max-w-7xl w-[100%] bg-white lg:p-[20px] xl:p-[0px] lg:mt-[200px] xl:mt-[250px] items-center mt-[150px] md:mt-[150px] m-[auto] flex flex-col lg:flex-row">
       <div className="w-[100%] lg:w-[50%]">
         {" "}
         <FeaturedImageGallery num={num} />
@@ -81,6 +82,9 @@ const SingleProduct = () => {
             </button>
           </div>
         </div>
+      </div>
+      <div className="  absolute top-[100px] left-10 lg:hidden">
+        <Btngohome/>
       </div>
     </div>
   );

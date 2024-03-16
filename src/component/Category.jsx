@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useShoppingCart } from "../context/ShoppingContext";
 import catalog from "../../public/catalog/catalog.json";
 import { Link } from "react-router-dom";
+import Btngohome from "./Btngohome";
 const Category = () => {
   const { Categories, setCategories, shop } = useShoppingCart();
 
@@ -42,6 +43,7 @@ const Category = () => {
           );
         })}
       </div>
+     
     </div>
   );
 };

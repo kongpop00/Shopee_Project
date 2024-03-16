@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
+import Btngohome from '../component/Btngohome';
 
 const SearchProduct = () => {
     const {products} = useParams();
@@ -16,7 +17,7 @@ const SearchProduct = () => {
         search()
     },[products])
   return (
-    <div className='max-w-7xl  h-[100vh] m-[auto] mt-[100px] lg:mt-[230px]'>
+    <div className='max-w-7xl  h-[100vh] m-[auto] mt-[150px] lg:mt-[230px]'>
       <div className='flex justify-center'>
         {data.length ==0 ? (
             <div className='text-[72px] text-[#353434bd]'>Product not found</div>
@@ -49,6 +50,9 @@ const SearchProduct = () => {
             
         }
 
+      </div>
+      <div className="  absolute top-[100px] left-10 lg:hidden">
+        <Btngohome/>
       </div>
     </div>
   )
