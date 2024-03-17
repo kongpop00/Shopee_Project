@@ -11,7 +11,7 @@ const Category = () => {
     const respones = await axios.get(
       "https://dummyjson.com/products/categories"
     );
-    console.log("===========", respones.data);
+   // console.log("===========", respones.data);
     setCategories(respones.data);
   };
   const category = shop.filter((e) => e.category.includes("fragrances"));

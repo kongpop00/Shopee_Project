@@ -18,7 +18,7 @@ import { useShoppingCart } from "../context/ShoppingContext";
 import { Link } from "react-router-dom";
 const Nav = () => {
   const [isopenProfile, setIsopenProfile] = useState(false);
-  const { Categories, setSearch, handleSearch } = useShoppingCart();
+  const { Categories, setSearch, handleSearch ,cartItem } = useShoppingCart();
   const handleopenProfile = () => {
     setIsopenProfile(!isopenProfile);
   };
@@ -124,16 +124,18 @@ const Nav = () => {
           </div>
 
           <div>
-            <div className=" relative">
+            <button  className=" relative"> <Link to='/cart'>
               <FontAwesomeIcon
+                
                 icon={faCartShopping}
-                className="w-[20px] h-[20px]  lg:w-[40px] lg:h-[100%] text-red-50 relative "
+                className="w-[20px] h-[20px]  lg:w-[40px] lg:h-[100%] text-white relative "
               />
 
               <div className="absolute right-[-15px] top-[-10px] w-[20px] h-[20px] lg:w-[30px] lg:h-[20px] rounded-[20px] bg-white text-center text-red-600">
-                0
+               {cartItem.length}
               </div>
-            </div>
+              </Link>
+            </button>
           </div>
         </div>
       </div>

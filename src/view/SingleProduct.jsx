@@ -7,11 +7,13 @@ import { Rating } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import Btngohome from "../component/Btngohome";
+
 const SingleProduct = () => {
-  const { setSingleProduct, SingleProduct } = useShoppingCart();
+  const { setSingleProduct, SingleProduct , getQeantity , increaseCartQuantity,decreaseCartQuantity,addtocart} = useShoppingCart();
 
   const { id } = useParams();
   const [num] = useState(id);
+  const quantity = getQeantity(id);
 
   const getSingleProduct = async () => {
     const respones = await axios.get(`https://dummyjson.com/products/${id}`);
@@ -21,6 +23,10 @@ const SingleProduct = () => {
   useEffect(() => {
     getSingleProduct();
   }, []);
+
+  useEffect(()=>{
+    console.log('quantity',quantity);
+  },[quantity])
   const discount =
     (SingleProduct.discountPercentage * SingleProduct.price) / 100;
   const discountPercentage = (SingleProduct.price - discount).toFixed(2);
@@ -66,16 +72,16 @@ const SingleProduct = () => {
           <div className="flex  items-center mt-[30px] text-[#3f3e3eb0]">
             <label>จำนวน</label>
             <div className="flex ml-[20px] items-center text-center">
-              <div className="w-[30px] border-2">-</div>
-              <div className="w-[50px] border-2">0</div>
-              <div className="w-[30px] border-2">+</div>
+              <button onClick={()=>decreaseCartQuantity(id)} className="w-[30px] border-2">-</button>
+              <div className="w-[50px] border-2">{quantity}</div>
+              <button onClick={()=>increaseCartQuantity(id)} className="w-[30px] border-2">+</button>
             </div>
             <label className="ml-[20px]">
               มีสินค้าทั้งหมด {SingleProduct.stock} ชิ้น
             </label>
           </div>
           <div className="flex mt-[50px] w-[280px] justify-between  text-white">
-            <button className="w-[120px]  h-[50px] bg-[#fff1dd] text-[#f86d54] border-2 border-[#f38471] text-[14px]">
+            <button onClick={addtocart} className="w-[120px]  h-[50px] bg-[#fff1dd] text-[#f86d54] border-2 border-[#f38471] text-[14px]">
               <FontAwesomeIcon icon={faCartPlus} /> เพิ่มไปยังรถเข็น
             </button>
             <button className="w-[120px]  h-[50px] bg-[#f84e30] text-[14px]">

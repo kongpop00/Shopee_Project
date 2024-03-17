@@ -7,7 +7,7 @@ const Containershop = () => {
   const getAllProduct = async () => {
     try {
       const res = await axios.get("https://dummyjson.com/products");
-      console.log("==", res.data.products);
+    //console.log("==", res.data.products);
       setShop(res.data.products);
     } catch {
       console.log(err);

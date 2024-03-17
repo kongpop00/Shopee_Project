@@ -6,6 +6,7 @@ import { ShoppingCartProvider } from "./context/ShoppingContext";
 import SingleProduct from "./view/SingleProduct";
 import ProductsCatalog from "./view/ProductsCatalog";
 import SearchProduct from "./view/SearchProduct";
+import Cart from "./component/Cart";
 function App() {
  
   
@@ -19,6 +20,7 @@ function App() {
              <Route path='/:id' element={<SingleProduct/>}/>
               <Route path='catalog/:name' element={<ProductsCatalog/>}/>
               <Route path='search/:products' element={<SearchProduct/>}/>
+              <Route path='cart' element={<Cart/>}/>
              
            
             </Routes>
